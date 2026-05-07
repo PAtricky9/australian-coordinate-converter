@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Australian Coordinate Converter</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="tool-panel" aria-labelledby="app-title">
+        <div class="heading-row">
+          <div>
+            <p class="eyebrow">Offline coordinate tool</p>
+            <h1 id="app-title">Australian Coordinate Converter</h1>
+            <p class="subtitle">Convert between geographic coordinates and projected grids used in Australia, including GDA2020 / MGA, GDA94 / MGA and WGS84 / UTM.</p>
+          </div>
+          <span class="status-pill">Version 2 single point</span>
+        </div>
+
+        <form id="converter-form" class="converter-form">
+          <section class="form-step" aria-labelledby="input-format-title">
+            <h2 id="input-format-title">Input Coordinate Format</h2>
+            <label>
+              Format
+              <select id="input-format" name="input-format">
+                <option value="geographic" selected>Latitude and longitude</option>
+                <option value="projected">Easting and northing</option>
+              </select>
+            </label>
+          </section>
+
+          <section class="form-step" aria-labelledby="source-crs-title">
+            <h2 id="source-crs-title">Input Coordinate Reference System</h2>
+            <div class="settings-grid">
+              <label>
+                Source CRS
+                <select id="source-crs" name="source-crs"></select>
+              </label>
+
+              <label id="source-zone-wrap">
+                Grid Zone
+                <select id="source-zone" name="source-zone"></select>
+              </label>
+            </div>
+          </section>
+
+          <section class="form-step" aria-labelledby="coordinates-title">
+            <h2 id="coordinates-title">Input Coordinates</h2>
+
+            <div id="angle-format-wrap" class="settings-grid">
+              <label>
+                Coordinate Entry Mode
+                <select id="angle-format" name="angle-format">
+                  <option value="decimalDegrees" selected>Decimal degrees</option>
+                  <option value="dms">Degrees minutes seconds</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="grid-entry-mode-wrap" class="settings-grid hidden">
+              <label>
+                Grid Entry Mode
+                <select id="grid-entry-mode" name="grid-entry-mode">
+                  <option value="separate" selected>Separate easting and northing</option>
+                  <option value="fieldAppUtm">Field app UTM text</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="geo-inputs" class="input-grid">
+              <label>
+                Latitude
+                <input id="latitude" name="latitude" autocomplete="off" placeholder="-37.8136">
+              </label>
+              <label>
+                Longitude
+                <input id="longitude" name="longitude" autocomplete="off" placeholder="144.9631">
+              </label>
+            </div>
+
+            <div id="grid-inputs" class="input-grid hidden">
+              <label>
+                Easting
+                <input id="easting" name="easting" inputmode="decimal" autocomplete="off" placeholder="320704.446">
+              </label>
+              <label>
+                Northing
+                <input id="northing" name="northing" inputmode="decimal" autocomplete="off" placeholder="5812911.700">
+              </label>
+            </div>
+
+            <div id="field-app-input-wrap" class="input-grid hidden">
+              <label>
+                Field App UTM Text
+                <input id="field-app-utm" name="field-app-utm" autocomplete="off" placeholder="55H 287110E 5858408N">
+              </label>
+            </div>
+          </section>
+
+          <section class="form-step" aria-labelledby="target-crs-title">
+            <h2 id="target-crs-title">Output Coordinate Reference System</h2>
+            <div class="settings-grid">
+              <label>
+                Target CRS
+                <select id="target-crs" name="target-crs"></select>
+              </label>
+
+              <label id="target-zone-wrap">
+                Grid Zone
+                <select id="target-zone" name="target-zone"></select>
+              </label>
+            </div>
+          </section>
+
+          <div class="button-row">
+            <button class="primary-button" type="submit">Convert</button>
+            <button class="secondary-button" type="button" id="copy-result">Copy Result</button>
+            <button class="ghost-button" type="button" id="clear-form">Clear</button>
+          </div>
+        </form>
+
+        <section class="result-panel" aria-live="polite">
+          <div class="result-header">
+            <h2>Result</h2>
+            <span id="precision-note">E/N: 3 decimals, Lat/Long: 8 decimals</span>
+          </div>
+          <div id="result-output" class="result-output">
+            <p class="empty-result">Enter a coordinate and choose Convert.</p>
+          </div>
+          <p id="message" class="message"></p>
+        </section>
+
+        <section class="education-notes" aria-label="Coordinate system notes">
+          <details>
+            <summary>What is latitude and longitude?</summary>
+            <p>Latitude and longitude are geographic coordinates measured in degrees. They are not projected metre based coordinates. They can belong to WGS84, GDA2020, GDA94 or another geographic CRS.</p>
+          </details>
+          <details>
+            <summary>What is MGA?</summary>
+            <p>MGA is the Map Grid of Australia. It is a metre based projected grid used with Australian datums such as GDA2020 and GDA94.</p>
+          </details>
+          <details>
+            <summary>What is UTM?</summary>
+            <p>UTM is the Universal Transverse Mercator grid. It is a metre based projected grid divided into zones. In this tool, UTM means WGS84 / UTM unless another datum is explicitly stated.</p>
+          </details>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
