@@ -1,0 +1,20 @@
+<svg width="360" height="220" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Blue coordinate grid map preview</title>
+  <desc id="desc">A stylised blue map grid with coordinate axes and a location marker.</desc>
+  <rect width="360" height="220" rx="8" fill="#E6F3FF"/>
+  <path d="M34 32H326M34 72H326M34 112H326M34 152H326M34 192H326" stroke="#9AC7EB" stroke-width="1.4"/>
+  <path d="M58 24V196M118 24V196M178 24V196M238 24V196M298 24V196" stroke="#9AC7EB" stroke-width="1.4"/>
+  <path d="M42 165C74 134 97 126 128 132C171 140 181 85 221 82C252 79 269 103 316 73" stroke="#1A7AC4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M42 165C74 134 97 126 128 132C171 140 181 85 221 82C252 79 269 103 316 73" stroke="#77BCEB" stroke-width="10" stroke-linecap="round" opacity="0.26"/>
+  <circle cx="221" cy="82" r="15" fill="#0A72C9"/>
+  <circle cx="221" cy="82" r="6" fill="white"/>
+  <path d="M221 104C221 104 203 84 203 68C203 57.5066 211.507 49 222 49C232.493 49 241 57.5066 241 68C241 84 221 104 221 104Z" fill="#0F8BE8"/>
+  <circle cx="222" cy="68" r="6" fill="white"/>
+  <rect x="36" y="34" width="86" height="28" rx="4" fill="white" fill-opacity="0.82"/>
+  <text x="48" y="53" fill="#0C5E9E" font-family="Arial, sans-serif" font-size="13" font-weight="700">MGA 55</text>
+  <rect x="211" y="151" width="106" height="32" rx="4" fill="white" fill-opacity="0.86"/>
+  <text x="224" y="171" fill="#0C5E9E" font-family="Arial, sans-serif" font-size="12" font-weight="700">E 320704</text>
+  <path d="M28 196H336" stroke="#0F5F9F" stroke-width="2" stroke-linecap="round"/>
+  <path d="M34 202L28 196L34 190" stroke="#0F5F9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M336 196L330 190M336 196L330 202" stroke="#0F5F9F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
