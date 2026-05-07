@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+
+# Local editor settings
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
+
+# Dependency folders, if this project later adds a build step
+node_modules/
+dist/
+build/
