@@ -55,6 +55,10 @@ select {
   gap: 16px;
 }
 
+.heading-row {
+  align-items: flex-start;
+}
+
 .eyebrow {
   margin: 0 0 6px;
   color: var(--accent);
@@ -84,6 +88,16 @@ h2 {
   margin: 8px 0 0;
   color: var(--muted);
   line-height: 1.45;
+}
+
+.hero-visual {
+  width: min(34vw, 260px);
+  min-width: 190px;
+  aspect-ratio: 18 / 11;
+  border: 1px solid #c9e1f4;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #e6f3ff;
 }
 
 .status-pill {
@@ -410,6 +424,12 @@ details p {
   .result-header {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-width: 0;
+    max-height: 180px;
   }
 
   .settings-grid,
